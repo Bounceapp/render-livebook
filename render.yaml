@@ -1,0 +1,17 @@
+services:
+  - type: pserv
+    name: livebook
+    runtime: elixir
+    buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook
+    startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
+    envVars:
+    - key: LIVEBOOK_HOME
+      value: /data
+    - key: LIVEBOOK_PASSWORD
+      generateValue: true # Generate a base64-encoded 256-bit value
+    - key: LIVEBOOK_PORT
+      value: 8080
+    disk: # Persistent disk configuration
+      name: data
+      mountPath: /data
+      sizeGB: 10
