@@ -14,7 +14,7 @@ services:
     - key: ELIXIR_VERSION
       value: 1.17.2
     - key: ERLANG_VERSION
-      value: 27.0.1
+      value: 27.0
     disk: # Persistent disk configuration
       name: data
       mountPath: /data
