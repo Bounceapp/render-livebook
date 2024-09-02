@@ -11,6 +11,10 @@ services:
       generateValue: true # Generate a base64-encoded 256-bit value
     - key: LIVEBOOK_PORT
       value: 8080
+    - key: ELIXIR_VERSION
+      value: 1.17.2
+    - key: ERLANG_VERSION
+      value: 27.0.1
     disk: # Persistent disk configuration
       name: data
       mountPath: /data
