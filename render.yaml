@@ -9,6 +9,8 @@ services:
       value: /data
     - key: LIVEBOOK_PASSWORD
       generateValue: true # Generate a base64-encoded 256-bit value
+    - key: PORT
+      value: 8080
     - key: LIVEBOOK_PORT
       value: 8080
     - key: ELIXIR_VERSION
