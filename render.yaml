@@ -3,7 +3,7 @@ services:
     name: livebook
     runtime: image
     image:
-      url: docker.io/my-name/my-image:latest
+      url: ghcr.io/livebook-dev/livebook
     envVars:
     - key: LIVEBOOK_HOME
       value: /data
