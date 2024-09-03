@@ -2,7 +2,7 @@ services:
   - type: pserv
     name: livebook
     runtime: elixir
-    buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook 0.13.3
+    buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook 0.12.1
     startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
     envVars:
     - key: LIVEBOOK_HOME
