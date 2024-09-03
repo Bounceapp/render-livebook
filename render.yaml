@@ -1,6 +1,7 @@
 services:
   - type: pserv
     name: livebook
+    runtime: docker
     image:
       url: docker.io/my-name/my-image:latest
     envVars:
