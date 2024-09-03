@@ -1,9 +1,8 @@
 services:
   - type: pserv
     name: livebook
-    runtime: elixir
-    buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook 0.12.1
-    startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
+    image:
+      url: docker.io/my-name/my-image:latest
     envVars:
     - key: LIVEBOOK_HOME
       value: /data
