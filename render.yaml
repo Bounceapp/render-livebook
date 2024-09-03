@@ -5,6 +5,10 @@ services:
     buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook 0.12.1
     startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
     envVars:
+    - key: ELIXIR_VERSION
+      value: 1.17.2
+    - key: ERLANG_VERSION
+      value: 27.0.1
     - key: LIVEBOOK_HOME
       value: /data
     - key: LIVEBOOK_PASSWORD
