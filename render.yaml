@@ -1,10 +1,14 @@
 services:
   - type: pserv
     name: livebook
-    runtime: image
-    image:
-      url: ghcr.io/livebook-dev/livebook
+    runtime: elixir
+    buildCommand: mix do local.rebar --force, local.hex --force && mix escript.install --force hex livebook 0.14.0
+    startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
     envVars:
+    - key: ELIXIR_VERSION
+      value: 1.17.2
+    - key: ERLANG_VERSION
+      value: 27.0
     - key: LIVEBOOK_HOME
       value: /data
     - key: LIVEBOOK_PASSWORD
