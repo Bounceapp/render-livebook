@@ -6,7 +6,7 @@ services:
     startCommand: cd /data && /opt/render/project/.mix/escripts/livebook server
     envVars:
     - key: ELIXIR_VERSION
-      value: 1.17.2
+      value: 1.18.2
     - key: ERLANG_VERSION
       value: 27.0
     - key: LIVEBOOK_HOME
